@@ -5,6 +5,8 @@
  */
 package Guis;
 
+import Modelos.busSilla;
+import Modelos.Silla;
 import Modelos.Pasajero;
 import Modelos.Persona;
 import Modelos.buses;
@@ -21,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ReservaGui extends javax.swing.JFrame {
 
-    public busSilla buSillas = new busSilla();
+    
     Label[] puesto;
     
     buses objBuses = new buses();
@@ -29,70 +31,72 @@ public class ReservaGui extends javax.swing.JFrame {
     buses []vectorBuses;
     int cantidadSillas;
     int pos;
-    DefaultTableModel tablaPuesto;
+    public busSilla buSillas = new busSilla();
     public ReservaGui() {
         initComponents();
-        lbEscogerBus.setEnabled(false);
+        
 //        lbNumeroPuesto.setEnabled(false);
 //        txtPuesto.setEnabled(false);
-        cbBus.setEnabled(false);
+        
 //        lbInformacion.setEnabled(false);
         vectorBuses=objBuses.getObjBuses();
         pos=0;
         obtenerBus();
         cantidadSillas=0;
         
+    
         puesto = new Label[50];
-        puesto[0] = label1;
-        puesto[1] = label2;
-        puesto[2] = label3;
-        puesto[3] = label4;
-        puesto[4] = label5;
-        puesto[5] = label6;
-        puesto[6] = label7;
-        puesto[7] = label8;
-        puesto[8] = label9;
-        puesto[9] = label10;
-        puesto[10] = label11;
-        puesto[11] = label12;
-        puesto[12] = label13;
-        puesto[13] = label14;
-        puesto[14] = label15;
-        puesto[15] = label16;
-        puesto[16] = label17;
-        puesto[17] = label18;
-        puesto[18] = label19;
-        puesto[19] = label20;
-        puesto[20] = label21;
-        puesto[21] = label22;
-        puesto[22] = label23;
-        puesto[23] = label24;
-        puesto[24] = label25;
-        puesto[25] = label26;
-        puesto[26] = label27;
-        puesto[27] = label28;
-        puesto[28] = label29;
-        puesto[29] = label30;
-        puesto[30] = label31;
-        puesto[31] = label32;
-        puesto[32] = label33;
-        puesto[33] = label34;
-        puesto[34] = label35;
-        puesto[35] = label36;
-        puesto[36] = label37;
-        puesto[37] = label38;
-        puesto[38] = label39;
-        puesto[39] = label40;
-        puesto[40] = label41;
-        puesto[41] = label42;
-        puesto[42] = label43;
-        puesto[43] = label44;
-        puesto[44] = label45;
-        puesto[45] = label46;
-        puesto[46] = label47;
-        puesto[47] = label48;
-        puesto[48] = label49;
-        puesto[49] = label50;
+        
+        puesto[0] = lb1;
+        puesto[1] = lb2;
+        puesto[2] = lb3;
+        puesto[3] = lb4;
+        puesto[4] = lb5;
+        puesto[5] = lb6;
+        puesto[6] = lb7;
+        puesto[7] = lb8;
+        puesto[8] = lb9;
+        puesto[9] = lb10;
+        puesto[10] = lb11;
+        puesto[11] = lb12;
+        puesto[12] = lb13;
+        puesto[13] = lb14;
+        puesto[14] = lb15;
+        puesto[15] = lb16;
+        puesto[16] = lb17;
+        puesto[17] = lb18;
+        puesto[18] = lb19;
+        puesto[19] = lb20;
+        puesto[20] = lb21;
+        puesto[21] = lb22;
+        puesto[22] = lb23;
+        puesto[23] = lb24;
+        puesto[24] = lb25;
+        puesto[25] = lb26;
+        puesto[26] = lb27;
+        puesto[27] = lb28;
+        puesto[28] = lb29;
+        puesto[29] = lb30;
+        puesto[30] = lb31;
+        puesto[31] = lb32;
+        puesto[32] = lb33;
+        puesto[33] = lb34;
+        puesto[34] = lb35;
+        puesto[35] = lb36;
+        puesto[36] = lb37;
+        puesto[37] = lb38;
+        puesto[38] = lb39;
+        puesto[39] = lb40;
+        puesto[40] = lb41;
+        puesto[41] = lb42;
+        puesto[42] = lb43;
+        puesto[43] = lb44;
+        puesto[44] = lb45;
+        puesto[45] = lb46;
+        puesto[46] = lb47;
+        puesto[47] = lb48;
+        puesto[48] = lb49;
+        puesto[49] = lb50;
     }
     public String[] getPosicion(String Clase) {
 
@@ -113,8 +117,8 @@ public class ReservaGui extends javax.swing.JFrame {
         int tamDisponibilidad = 0;
         String[] sillon = new String[49];
         for (int i = 0; i <= 49; i++) {
-            if (buSillas.silla[i].disponibilidad == true && buSillas.silla[i].clase.equals(Clase) && buSillas.silla[i].posicion.equals(Posicion)) {
-                sillon[tamDisponibilidad] = String.valueOf(buSillas.silla[i].numero);
+            if (buSillas.getSilla()[i].isDisponibilidad() == true && buSillas.getSilla()[i].getClase().equals(Clase) && buSillas.getSilla()[i].getPosicion().equals(Posicion)) {
+                sillon[tamDisponibilidad] = String.valueOf(buSillas.getSilla()[i].getNumero());
                 tamDisponibilidad += 1;
             }
         }
@@ -164,56 +168,56 @@ public class ReservaGui extends javax.swing.JFrame {
         jLabelPrecio = new javax.swing.JLabel();
         btnRegistrar = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        label3 = new java.awt.Label();
-        label4 = new java.awt.Label();
-        label7 = new java.awt.Label();
-        label8 = new java.awt.Label();
-        label9 = new java.awt.Label();
-        label10 = new java.awt.Label();
-        label11 = new java.awt.Label();
-        label12 = new java.awt.Label();
-        label13 = new java.awt.Label();
-        label14 = new java.awt.Label();
-        label15 = new java.awt.Label();
-        label16 = new java.awt.Label();
-        label17 = new java.awt.Label();
-        label18 = new java.awt.Label();
-        label19 = new java.awt.Label();
-        label20 = new java.awt.Label();
-        label21 = new java.awt.Label();
-        label22 = new java.awt.Label();
-        label23 = new java.awt.Label();
-        label24 = new java.awt.Label();
-        label25 = new java.awt.Label();
-        label26 = new java.awt.Label();
-        label27 = new java.awt.Label();
-        label28 = new java.awt.Label();
-        label29 = new java.awt.Label();
-        label30 = new java.awt.Label();
-        label31 = new java.awt.Label();
-        label32 = new java.awt.Label();
-        label33 = new java.awt.Label();
-        label34 = new java.awt.Label();
-        label35 = new java.awt.Label();
-        label36 = new java.awt.Label();
-        label37 = new java.awt.Label();
-        label38 = new java.awt.Label();
-        label39 = new java.awt.Label();
-        label40 = new java.awt.Label();
-        label41 = new java.awt.Label();
-        label42 = new java.awt.Label();
-        label43 = new java.awt.Label();
-        label44 = new java.awt.Label();
-        label45 = new java.awt.Label();
-        label46 = new java.awt.Label();
-        label47 = new java.awt.Label();
-        label48 = new java.awt.Label();
-        label49 = new java.awt.Label();
-        label50 = new java.awt.Label();
-        label51 = new java.awt.Label();
-        label52 = new java.awt.Label();
-        label53 = new java.awt.Label();
-        label54 = new java.awt.Label();
+        lb3 = new java.awt.Label();
+        lb4 = new java.awt.Label();
+        lb1 = new java.awt.Label();
+        lb2 = new java.awt.Label();
+        lb7 = new java.awt.Label();
+        lb8 = new java.awt.Label();
+        lb5 = new java.awt.Label();
+        lb6 = new java.awt.Label();
+        lb16 = new java.awt.Label();
+        lb11 = new java.awt.Label();
+        lb12 = new java.awt.Label();
+        lb9 = new java.awt.Label();
+        lb10 = new java.awt.Label();
+        lb13 = new java.awt.Label();
+        lb15 = new java.awt.Label();
+        lb19 = new java.awt.Label();
+        lb20 = new java.awt.Label();
+        lb14 = new java.awt.Label();
+        lb17 = new java.awt.Label();
+        lb18 = new java.awt.Label();
+        lb24 = new java.awt.Label();
+        lb28 = new java.awt.Label();
+        lb23 = new java.awt.Label();
+        lb21 = new java.awt.Label();
+        lb22 = new java.awt.Label();
+        lb25 = new java.awt.Label();
+        lb27 = new java.awt.Label();
+        lb31 = new java.awt.Label();
+        lb32 = new java.awt.Label();
+        lb26 = new java.awt.Label();
+        lb29 = new java.awt.Label();
+        lb30 = new java.awt.Label();
+        lb35 = new java.awt.Label();
+        lb36 = new java.awt.Label();
+        lb39 = new java.awt.Label();
+        lb33 = new java.awt.Label();
+        lb34 = new java.awt.Label();
+        lb37 = new java.awt.Label();
+        lb44 = new java.awt.Label();
+        lb43 = new java.awt.Label();
+        lb40 = new java.awt.Label();
+        lb38 = new java.awt.Label();
+        lb41 = new java.awt.Label();
+        lb42 = new java.awt.Label();
+        lb47 = new java.awt.Label();
+        lb48 = new java.awt.Label();
+        lb50 = new java.awt.Label();
+        lb45 = new java.awt.Label();
+        lb46 = new java.awt.Label();
+        lb49 = new java.awt.Label();
         jLabel2 = new javax.swing.JLabel();
         jLabelPorcentajeO = new javax.swing.JLabel();
 
@@ -254,7 +258,6 @@ public class ReservaGui extends javax.swing.JFrame {
             }
         });
 
-        cbBus.setEnabled(false);
         cbBus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbBusActionPerformed(evt);
@@ -262,7 +265,6 @@ public class ReservaGui extends javax.swing.JFrame {
         });
 
         lbEscogerBus.setText("PLACA DEL BUS");
-        lbEscogerBus.setEnabled(false);
 
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/search.png"))); // NOI18N
         btnBuscar.setText("BUSCAR CLIENTE");
@@ -351,10 +353,11 @@ public class ReservaGui extends javax.swing.JFrame {
                                 .addGap(35, 35, 35)
                                 .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel9)
-                                    .addComponent(jLabel8)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbEscogerBus)
-                                    .addComponent(jLabel11)))
+                                    .addComponent(jLabel11)
+                                    .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbEscogerBus)
+                                        .addComponent(jLabel8))))
                             .addGroup(jpReservaLayout.createSequentialGroup()
                                 .addGap(64, 64, 64)
                                 .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -363,17 +366,19 @@ public class ReservaGui extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jpReservaLayout.createSequentialGroup()
-                                .addComponent(jLabelPrecio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelPrecio, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
                                 .addGap(44, 44, 44)
                                 .addComponent(btnRegistrar)
                                 .addGap(66, 66, 66))
                             .addComponent(txtNombre)
                             .addComponent(jBoxClase, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtCedula)
-                            .addComponent(jBoxPosicion, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cbBus, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jBoxSilla, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(33, 33, 33)
+                            .addGroup(jpReservaLayout.createSequentialGroup()
+                                .addComponent(jBoxPosicion, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jBoxSilla, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnBuscar)
                     .addComponent(btnAtras))
@@ -384,7 +389,11 @@ public class ReservaGui extends javax.swing.JFrame {
             .addGroup(jpReservaLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel7)
-                .addGap(42, 42, 42)
+                .addGap(4, 4, 4)
+                .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbBus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbEscogerBus))
+                .addGap(18, 18, 18)
                 .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -405,22 +414,13 @@ public class ReservaGui extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jBoxPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
+                    .addComponent(jBoxPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBoxSilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpReservaLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                        .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cbBus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbEscogerBus))
-                        .addGap(18, 18, 18))
-                    .addGroup(jpReservaLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btnAtras)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addGap(6, 6, 6)
+                .addComponent(btnAtras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpReservaLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
@@ -429,7 +429,7 @@ public class ReservaGui extends javax.swing.JFrame {
                     .addGroup(jpReservaLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(btnRegistrar)))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jtpBus.addTab("Reserva pasajeros", jpReserva);
@@ -437,259 +437,258 @@ public class ReservaGui extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(null);
 
-        label3.setBackground(new java.awt.Color(153, 153, 153));
-        label3.setText("  ");
-        jPanel4.add(label3);
-        label3.setBounds(480, 190, 20, 20);
+        lb3.setBackground(new java.awt.Color(153, 153, 153));
+        lb3.setText("  ");
+        jPanel4.add(lb3);
+        lb3.setBounds(480, 190, 20, 20);
 
-        label4.setBackground(new java.awt.Color(153, 153, 153));
-        label4.setText("  ");
-        jPanel4.add(label4);
-        label4.setBounds(480, 210, 20, 20);
+        lb4.setBackground(new java.awt.Color(153, 153, 153));
+        lb4.setText("  ");
+        jPanel4.add(lb4);
+        lb4.setBounds(480, 210, 20, 20);
 
-        label7.setBackground(new java.awt.Color(153, 153, 153));
-        label7.setText("  ");
-        jPanel4.add(label7);
-        label7.setBounds(480, 110, 20, 20);
+        lb1.setBackground(new java.awt.Color(153, 153, 153));
+        lb1.setText("  ");
+        jPanel4.add(lb1);
+        lb1.setBounds(480, 110, 20, 20);
 
-        label8.setBackground(new java.awt.Color(153, 153, 153));
-        label8.setText("  ");
-        jPanel4.add(label8);
-        label8.setBounds(480, 130, 20, 20);
+        lb2.setBackground(new java.awt.Color(153, 153, 153));
+        lb2.setText("  ");
+        jPanel4.add(lb2);
+        lb2.setBounds(480, 130, 20, 20);
 
-        label9.setBackground(new java.awt.Color(153, 153, 153));
-        label9.setText("  ");
-        jPanel4.add(label9);
-        label9.setBounds(450, 190, 20, 20);
+        lb7.setBackground(new java.awt.Color(153, 153, 153));
+        lb7.setText("  ");
+        jPanel4.add(lb7);
+        lb7.setBounds(450, 190, 20, 20);
 
-        label10.setBackground(new java.awt.Color(153, 153, 153));
-        label10.setText("  ");
-        jPanel4.add(label10);
-        label10.setBounds(450, 210, 20, 20);
+        lb8.setBackground(new java.awt.Color(153, 153, 153));
+        lb8.setText("  ");
+        jPanel4.add(lb8);
+        lb8.setBounds(450, 210, 20, 20);
 
-        label11.setBackground(new java.awt.Color(153, 153, 153));
-        label11.setText("  ");
-        jPanel4.add(label11);
-        label11.setBounds(450, 110, 20, 20);
+        lb5.setBackground(new java.awt.Color(153, 153, 153));
+        lb5.setText("  ");
+        jPanel4.add(lb5);
+        lb5.setBounds(450, 110, 20, 20);
 
-        label12.setBackground(new java.awt.Color(153, 153, 153));
-        label12.setText("  ");
-        jPanel4.add(label12);
-        label12.setBounds(450, 130, 20, 20);
+        lb6.setBackground(new java.awt.Color(153, 153, 153));
+        lb6.setText("  ");
+        jPanel4.add(lb6);
+        lb6.setBounds(450, 130, 20, 20);
 
-        label13.setBackground(new java.awt.Color(153, 153, 153));
-        label13.setText("  ");
-        jPanel4.add(label13);
-        label13.setBounds(380, 210, 20, 20);
+        lb16.setBackground(new java.awt.Color(153, 153, 153));
+        lb16.setText("  ");
+        jPanel4.add(lb16);
+        lb16.setBounds(380, 210, 20, 20);
 
-        label14.setBackground(new java.awt.Color(153, 153, 153));
-        label14.setText("  ");
-        jPanel4.add(label14);
-        label14.setBounds(410, 190, 20, 20);
+        lb11.setBackground(new java.awt.Color(153, 153, 153));
+        lb11.setText("  ");
+        jPanel4.add(lb11);
+        lb11.setBounds(410, 190, 20, 20);
 
-        label15.setBackground(new java.awt.Color(153, 153, 153));
-        label15.setText("  ");
-        jPanel4.add(label15);
-        label15.setBounds(410, 210, 20, 20);
+        lb12.setBackground(new java.awt.Color(153, 153, 153));
+        lb12.setText("  ");
+        jPanel4.add(lb12);
+        lb12.setBounds(410, 210, 20, 20);
 
-        label16.setBackground(new java.awt.Color(153, 153, 153));
-        label16.setText("  ");
-        jPanel4.add(label16);
-        label16.setBounds(410, 110, 20, 20);
+        lb9.setBackground(new java.awt.Color(153, 153, 153));
+        lb9.setText("  ");
+        jPanel4.add(lb9);
+        lb9.setBounds(410, 110, 20, 20);
 
-        label17.setBackground(new java.awt.Color(153, 153, 153));
-        label17.setText("  ");
-        jPanel4.add(label17);
-        label17.setBounds(410, 130, 20, 20);
+        lb10.setBackground(new java.awt.Color(153, 153, 153));
+        lb10.setText("  ");
+        jPanel4.add(lb10);
+        lb10.setBounds(410, 130, 20, 20);
 
-        label18.setBackground(new java.awt.Color(153, 153, 153));
-        label18.setText("  ");
-        jPanel4.add(label18);
-        label18.setBounds(380, 110, 20, 20);
+        lb13.setBackground(new java.awt.Color(153, 153, 153));
+        lb13.setText("  ");
+        jPanel4.add(lb13);
+        lb13.setBounds(380, 110, 20, 20);
 
-        label19.setBackground(new java.awt.Color(153, 153, 153));
-        label19.setText("  ");
-        jPanel4.add(label19);
-        label19.setBounds(380, 190, 20, 20);
+        lb15.setBackground(new java.awt.Color(153, 153, 153));
+        lb15.setText("  ");
+        jPanel4.add(lb15);
+        lb15.setBounds(380, 190, 20, 20);
 
-        label20.setBackground(new java.awt.Color(153, 153, 153));
-        label20.setText("  ");
-        jPanel4.add(label20);
-        label20.setBounds(350, 190, 20, 20);
+        lb19.setBackground(new java.awt.Color(153, 153, 153));
+        lb19.setText("  ");
+        jPanel4.add(lb19);
+        lb19.setBounds(350, 190, 20, 20);
 
-        label21.setBackground(new java.awt.Color(153, 153, 153));
-        label21.setText("  ");
-        jPanel4.add(label21);
-        label21.setBounds(350, 210, 20, 20);
+        lb20.setBackground(new java.awt.Color(153, 153, 153));
+        lb20.setText("  ");
+        jPanel4.add(lb20);
+        lb20.setBounds(350, 210, 20, 20);
 
-        label22.setBackground(new java.awt.Color(153, 153, 153));
-        label22.setText("  ");
-        jPanel4.add(label22);
-        label22.setBounds(380, 130, 20, 20);
+        lb14.setBackground(new java.awt.Color(153, 153, 153));
+        lb14.setText("  ");
+        jPanel4.add(lb14);
+        lb14.setBounds(380, 130, 20, 20);
 
-        label23.setBackground(new java.awt.Color(153, 153, 153));
-        label23.setText("  ");
-        jPanel4.add(label23);
-        label23.setBounds(340, 110, 20, 20);
+        lb17.setBackground(new java.awt.Color(153, 153, 153));
+        lb17.setText("  ");
+        jPanel4.add(lb17);
+        lb17.setBounds(340, 110, 20, 20);
 
-        label24.setBackground(new java.awt.Color(153, 153, 153));
-        label24.setText("  ");
-        jPanel4.add(label24);
-        label24.setBounds(340, 130, 20, 20);
+        lb18.setBackground(new java.awt.Color(153, 153, 153));
+        lb18.setText("  ");
+        jPanel4.add(lb18);
+        lb18.setBounds(340, 130, 20, 20);
 
-        label25.setBackground(new java.awt.Color(153, 153, 153));
-        label25.setText("  ");
-        jPanel4.add(label25);
-        label25.setBounds(310, 210, 20, 20);
+        lb24.setBackground(new java.awt.Color(153, 153, 153));
+        lb24.setText("  ");
+        jPanel4.add(lb24);
+        lb24.setBounds(310, 210, 20, 20);
 
-        label26.setBackground(new java.awt.Color(153, 153, 153));
-        label26.setText("  ");
-        jPanel4.add(label26);
-        label26.setBounds(280, 210, 20, 20);
+        lb28.setBackground(new java.awt.Color(153, 153, 153));
+        lb28.setText("  ");
+        jPanel4.add(lb28);
+        lb28.setBounds(280, 210, 20, 20);
 
-        label27.setBackground(new java.awt.Color(153, 153, 153));
-        label27.setText("  ");
-        jPanel4.add(label27);
-        label27.setBounds(310, 190, 20, 20);
+        lb23.setBackground(new java.awt.Color(153, 153, 153));
+        lb23.setText("  ");
+        jPanel4.add(lb23);
+        lb23.setBounds(310, 190, 20, 20);
 
-        label28.setBackground(new java.awt.Color(153, 153, 153));
-        label28.setText("  ");
-        jPanel4.add(label28);
-        label28.setBounds(310, 110, 20, 20);
+        lb21.setBackground(new java.awt.Color(153, 153, 153));
+        lb21.setText("  ");
+        jPanel4.add(lb21);
+        lb21.setBounds(310, 110, 20, 20);
 
-        label29.setBackground(new java.awt.Color(153, 153, 153));
-        label29.setText("  ");
-        jPanel4.add(label29);
-        label29.setBounds(310, 130, 20, 20);
+        lb22.setBackground(new java.awt.Color(153, 153, 153));
+        lb22.setText("  ");
+        jPanel4.add(lb22);
+        lb22.setBounds(310, 130, 20, 20);
 
-        label30.setBackground(new java.awt.Color(153, 153, 153));
-        label30.setText("  ");
-        jPanel4.add(label30);
-        label30.setBounds(270, 110, 20, 20);
+        lb25.setBackground(new java.awt.Color(153, 153, 153));
+        lb25.setText("  ");
+        jPanel4.add(lb25);
+        lb25.setBounds(270, 110, 20, 20);
 
-        label31.setBackground(new java.awt.Color(153, 153, 153));
-        label31.setText("  ");
-        jPanel4.add(label31);
-        label31.setBounds(280, 190, 20, 20);
+        lb27.setBackground(new java.awt.Color(153, 153, 153));
+        lb27.setText("  ");
+        jPanel4.add(lb27);
+        lb27.setBounds(280, 190, 20, 20);
 
-        label32.setBackground(new java.awt.Color(153, 153, 153));
-        label32.setText("  ");
-        jPanel4.add(label32);
-        label32.setBounds(250, 190, 20, 20);
+        lb31.setBackground(new java.awt.Color(153, 153, 153));
+        lb31.setText("  ");
+        jPanel4.add(lb31);
+        lb31.setBounds(250, 190, 20, 20);
 
-        label33.setBackground(new java.awt.Color(153, 153, 153));
-        label33.setText("  ");
-        jPanel4.add(label33);
-        label33.setBounds(250, 210, 20, 20);
+        lb32.setBackground(new java.awt.Color(153, 153, 153));
+        lb32.setText("  ");
+        jPanel4.add(lb32);
+        lb32.setBounds(250, 210, 20, 20);
 
-        label34.setBackground(new java.awt.Color(153, 153, 153));
-        label34.setText("  ");
-        jPanel4.add(label34);
-        label34.setBounds(270, 130, 20, 20);
+        lb26.setBackground(new java.awt.Color(153, 153, 153));
+        lb26.setText("  ");
+        jPanel4.add(lb26);
+        lb26.setBounds(270, 130, 20, 20);
 
-        label35.setBackground(new java.awt.Color(153, 153, 153));
-        label35.setText("  ");
-        jPanel4.add(label35);
-        label35.setBounds(240, 110, 20, 20);
+        lb29.setBackground(new java.awt.Color(153, 153, 153));
+        lb29.setText("  ");
+        jPanel4.add(lb29);
+        lb29.setBounds(240, 110, 20, 20);
 
-        label36.setBackground(new java.awt.Color(153, 153, 153));
-        label36.setText("  ");
-        jPanel4.add(label36);
-        label36.setBounds(240, 130, 20, 20);
+        lb30.setBackground(new java.awt.Color(153, 153, 153));
+        lb30.setText("  ");
+        jPanel4.add(lb30);
+        lb30.setBounds(240, 130, 20, 20);
 
-        label37.setBackground(new java.awt.Color(153, 153, 153));
-        label37.setText("  ");
-        jPanel4.add(label37);
-        label37.setBounds(210, 190, 20, 20);
+        lb35.setBackground(new java.awt.Color(153, 153, 153));
+        lb35.setText("  ");
+        jPanel4.add(lb35);
+        lb35.setBounds(210, 190, 20, 20);
 
-        label38.setBackground(new java.awt.Color(153, 153, 153));
-        label38.setText("  ");
-        jPanel4.add(label38);
-        label38.setBounds(210, 210, 20, 20);
+        lb36.setBackground(new java.awt.Color(153, 153, 153));
+        lb36.setText("  ");
+        jPanel4.add(lb36);
+        lb36.setBounds(210, 210, 20, 20);
 
-        label39.setBackground(new java.awt.Color(153, 153, 153));
-        label39.setText("  ");
-        jPanel4.add(label39);
-        label39.setBounds(180, 190, 20, 20);
+        lb39.setBackground(new java.awt.Color(153, 153, 153));
+        lb39.setText("  ");
+        jPanel4.add(lb39);
+        lb39.setBounds(180, 190, 20, 20);
 
-        label40.setBackground(new java.awt.Color(153, 153, 153));
-        label40.setText("  ");
-        jPanel4.add(label40);
-        label40.setBounds(210, 110, 20, 20);
+        lb33.setBackground(new java.awt.Color(153, 153, 153));
+        lb33.setText("  ");
+        jPanel4.add(lb33);
+        lb33.setBounds(210, 110, 20, 20);
 
-        label41.setBackground(new java.awt.Color(153, 153, 153));
-        label41.setText("  ");
-        jPanel4.add(label41);
-        label41.setBounds(210, 130, 20, 20);
+        lb34.setBackground(new java.awt.Color(153, 153, 153));
+        lb34.setText("  ");
+        jPanel4.add(lb34);
+        lb34.setBounds(210, 130, 20, 20);
 
-        label42.setBackground(new java.awt.Color(153, 153, 153));
-        label42.setText("  ");
-        jPanel4.add(label42);
-        label42.setBounds(170, 110, 20, 20);
+        lb37.setBackground(new java.awt.Color(153, 153, 153));
+        lb37.setText("  ");
+        jPanel4.add(lb37);
+        lb37.setBounds(170, 110, 20, 20);
 
-        label43.setBackground(new java.awt.Color(153, 153, 153));
-        label43.setText("  ");
-        jPanel4.add(label43);
-        label43.setBounds(150, 210, 20, 20);
+        lb44.setBackground(new java.awt.Color(153, 153, 153));
+        lb44.setText("  ");
+        jPanel4.add(lb44);
+        lb44.setBounds(150, 210, 20, 20);
 
-        label44.setBackground(new java.awt.Color(153, 153, 153));
-        label44.setText("  ");
-        jPanel4.add(label44);
-        label44.setBounds(150, 190, 20, 20);
+        lb43.setBackground(new java.awt.Color(153, 153, 153));
+        lb43.setText("  ");
+        jPanel4.add(lb43);
+        lb43.setBounds(150, 190, 20, 20);
 
-        label45.setBackground(new java.awt.Color(153, 153, 153));
-        label45.setText("  ");
-        jPanel4.add(label45);
-        label45.setBounds(180, 210, 20, 20);
+        lb40.setBackground(new java.awt.Color(153, 153, 153));
+        lb40.setText("  ");
+        jPanel4.add(lb40);
+        lb40.setBounds(180, 210, 20, 20);
 
-        label46.setBackground(new java.awt.Color(153, 153, 153));
-        label46.setText("  ");
-        jPanel4.add(label46);
-        label46.setBounds(170, 130, 20, 20);
+        lb38.setBackground(new java.awt.Color(153, 153, 153));
+        lb38.setText("  ");
+        jPanel4.add(lb38);
+        lb38.setBounds(170, 130, 20, 20);
 
-        label47.setBackground(new java.awt.Color(153, 153, 153));
-        label47.setText("  ");
-        jPanel4.add(label47);
-        label47.setBounds(130, 110, 20, 20);
+        lb41.setBackground(new java.awt.Color(153, 153, 153));
+        lb41.setText("  ");
+        jPanel4.add(lb41);
+        lb41.setBounds(130, 110, 20, 20);
 
-        label48.setBackground(new java.awt.Color(153, 153, 153));
-        label48.setText("  ");
-        jPanel4.add(label48);
-        label48.setBounds(130, 130, 20, 20);
+        lb42.setBackground(new java.awt.Color(153, 153, 153));
+        lb42.setText("  ");
+        jPanel4.add(lb42);
+        lb42.setBounds(130, 130, 20, 20);
 
-        label49.setBackground(new java.awt.Color(153, 153, 153));
-        label49.setText("  ");
-        jPanel4.add(label49);
-        label49.setBounds(110, 190, 20, 20);
+        lb47.setBackground(new java.awt.Color(153, 153, 153));
+        lb47.setText("  ");
+        jPanel4.add(lb47);
+        lb47.setBounds(110, 190, 20, 20);
 
-        label50.setBackground(new java.awt.Color(153, 153, 153));
-        label50.setText("  ");
-        jPanel4.add(label50);
-        label50.setBounds(110, 210, 20, 20);
+        lb48.setBackground(new java.awt.Color(153, 153, 153));
+        lb48.setText("  ");
+        jPanel4.add(lb48);
+        lb48.setBounds(110, 210, 20, 20);
 
-        label51.setBackground(new java.awt.Color(153, 153, 153));
-        label51.setText("  ");
-        jPanel4.add(label51);
-        label51.setBounds(60, 130, 20, 20);
+        lb50.setBackground(new java.awt.Color(153, 153, 153));
+        lb50.setText("  ");
+        jPanel4.add(lb50);
+        lb50.setBounds(60, 130, 20, 20);
 
-        label52.setBackground(new java.awt.Color(153, 153, 153));
-        label52.setText("  ");
-        jPanel4.add(label52);
-        label52.setBounds(100, 110, 20, 20);
+        lb45.setBackground(new java.awt.Color(153, 153, 153));
+        lb45.setText("  ");
+        jPanel4.add(lb45);
+        lb45.setBounds(100, 110, 20, 20);
 
-        label53.setBackground(new java.awt.Color(153, 153, 153));
-        label53.setText("  ");
-        jPanel4.add(label53);
-        label53.setBounds(100, 130, 20, 20);
+        lb46.setBackground(new java.awt.Color(153, 153, 153));
+        lb46.setText("  ");
+        jPanel4.add(lb46);
+        lb46.setBounds(100, 130, 20, 20);
 
-        label54.setBackground(new java.awt.Color(153, 153, 153));
-        label54.setText("  ");
-        jPanel4.add(label54);
-        label54.setBounds(60, 110, 20, 20);
+        lb49.setBackground(new java.awt.Color(153, 153, 153));
+        lb49.setText("  ");
+        jPanel4.add(lb49);
+        lb49.setBounds(60, 110, 20, 20);
 
         jLabel2.setBackground(new java.awt.Color(255, 0, 102));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/busFondo.png"))); // NOI18N
-        jLabel2.setText("dvdsd");
         jPanel4.add(jLabel2);
         jLabel2.setBounds(20, 70, 620, 210);
 
@@ -718,26 +717,31 @@ public class ReservaGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        String Nombre = txtNombre.getText();
-        String Cedula = txtCedula.getText();
-        System.out.println(Nombre);
-        System.out.println(Cedula);
-        int Numero = Integer.parseInt((String) jBoxSilla.getSelectedItem());
-        Pasajero pasajero = new Pasajero();
-        pasajero.setNombre(Nombre);
-        pasajero.setCedula(Cedula);
-        buSillas.silla[Numero - 1].disponibilidad = false;
-        buSillas.silla[Numero - 1].setPasajero(pasajero);
-        System.out.println(buSillas);
-        System.out.println(pasajero);
-        txtNombre.setText("");
-        txtCedula.setText("");
-        jBoxClase.setSelectedIndex(0);
-        jBoxPosicion.removeAllItems();
-        jBoxSilla.removeAllItems();
-        String PorDisponible = String.valueOf((Ocupacion() * 100) / 50) + "%";
-        jLabelPorcentajeO.setText(PorDisponible);
-        jLabelPrecio.setText("0$");
+        if((Integer.parseInt(jBoxSilla.getSelectedItem().toString())==1)||(Integer.parseInt(jBoxSilla.getSelectedItem().toString())<=4)||
+                (Integer.parseInt(jBoxSilla.getSelectedItem().toString())==47)||Integer.parseInt(jBoxSilla.getSelectedItem().toString())==48){
+            JOptionPane.showMessageDialog(this, "SILLAS RESERVADAS PARA NECESIDADES DEL VIAJE");
+        }else{
+            String Nombre = txtNombre.getText();
+            String Cedula = txtCedula.getText();
+            System.out.println(Nombre);
+            System.out.println(Cedula);
+            int Numero = Integer.parseInt((String) jBoxSilla.getSelectedItem());
+            Pasajero pasajero = new Pasajero();
+            pasajero.setNombre(Nombre);
+            pasajero.setCedula(Cedula);
+            buSillas.getSilla()[Numero-1].setDisponibilidad(false);
+            buSillas.getSilla()[Numero - 1].setPasajero(pasajero);
+            System.out.println(buSillas);
+            System.out.println(pasajero);
+            txtNombre.setText("");
+            txtCedula.setText("");
+            jBoxClase.setSelectedIndex(0);
+            jBoxPosicion.removeAllItems();
+            jBoxSilla.removeAllItems();
+            String PorDisponible = String.valueOf((Ocupacion() * 100) / 50) + "%";
+            jLabelPorcentajeO.setText(PorDisponible);
+            jLabelPrecio.setText("0$");
+        }
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void jBoxPosicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBoxPosicionActionPerformed
@@ -758,7 +762,7 @@ public class ReservaGui extends javax.swing.JFrame {
     private void jBoxSillaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jBoxSillaItemStateChanged
         if (evt.getStateChange() == ItemEvent.SELECTED) {
             int p = Integer.parseInt(this.jBoxSilla.getSelectedItem().toString());
-            int precio = buSillas.silla[p - 1].getPrecio();
+            int precio = buSillas.getSilla()[p - 1].getPrecio();
             this.jLabelPrecio.setText(String.valueOf(precio));
         }
     }//GEN-LAST:event_jBoxSillaItemStateChanged
@@ -792,6 +796,9 @@ public class ReservaGui extends javax.swing.JFrame {
                 lbEscogerBus.setEnabled(true);
                 cbBus.setEnabled(true);
                 bandera=true;
+                System.out.println("cantidad sillas gui "+cantidadSillas);
+                
+                
                 break;
             }
         }
@@ -816,6 +823,7 @@ public class ReservaGui extends javax.swing.JFrame {
         for(int i=0; i<vectorBuses.length;i++){
             if(vectorBuses[i]!=null){
                 cbBus.addItem(vectorBuses[i].getPlaca());
+                pos=i;
             }
         }
         
@@ -856,10 +864,11 @@ public class ReservaGui extends javax.swing.JFrame {
     }
     public int Ocupacion() {
         int CuentaSillascupadas = 0;
-        for (int i = 0; i <= 49; i++) {
-            if (buSillas.silla[i].isDisponibilidad() == false) {
+        for (int i = 0; i < 50; i++) {
+            if ((buSillas.getSilla()[i].isDisponibilidad() == false)||(i==0)||(i<4)||(i==47)||(i==48)) {
                 puesto[i].setBackground(Color.RED);
                 CuentaSillascupadas++;
+                System.out.println("puesto "+i+"Cuenta sillas "+CuentaSillascupadas);
             } else {
                 puesto[i].setBackground(Color.CYAN);
             }
@@ -889,59 +898,59 @@ public class ReservaGui extends javax.swing.JFrame {
     private javax.swing.JPanel jpReserva;
     private javax.swing.JTabbedPane jtpBus;
     private java.awt.Label label1;
-    private java.awt.Label label10;
-    private java.awt.Label label11;
-    private java.awt.Label label12;
-    private java.awt.Label label13;
-    private java.awt.Label label14;
-    private java.awt.Label label15;
-    private java.awt.Label label16;
-    private java.awt.Label label17;
-    private java.awt.Label label18;
-    private java.awt.Label label19;
     private java.awt.Label label2;
-    private java.awt.Label label20;
-    private java.awt.Label label21;
-    private java.awt.Label label22;
-    private java.awt.Label label23;
-    private java.awt.Label label24;
-    private java.awt.Label label25;
-    private java.awt.Label label26;
-    private java.awt.Label label27;
-    private java.awt.Label label28;
-    private java.awt.Label label29;
-    private java.awt.Label label3;
-    private java.awt.Label label30;
-    private java.awt.Label label31;
-    private java.awt.Label label32;
-    private java.awt.Label label33;
-    private java.awt.Label label34;
-    private java.awt.Label label35;
-    private java.awt.Label label36;
-    private java.awt.Label label37;
-    private java.awt.Label label38;
-    private java.awt.Label label39;
-    private java.awt.Label label4;
-    private java.awt.Label label40;
-    private java.awt.Label label41;
-    private java.awt.Label label42;
-    private java.awt.Label label43;
-    private java.awt.Label label44;
-    private java.awt.Label label45;
-    private java.awt.Label label46;
-    private java.awt.Label label47;
-    private java.awt.Label label48;
-    private java.awt.Label label49;
     private java.awt.Label label5;
-    private java.awt.Label label50;
-    private java.awt.Label label51;
-    private java.awt.Label label52;
-    private java.awt.Label label53;
-    private java.awt.Label label54;
     private java.awt.Label label6;
-    private java.awt.Label label7;
-    private java.awt.Label label8;
-    private java.awt.Label label9;
+    private java.awt.Label lb1;
+    private java.awt.Label lb10;
+    private java.awt.Label lb11;
+    private java.awt.Label lb12;
+    private java.awt.Label lb13;
+    private java.awt.Label lb14;
+    private java.awt.Label lb15;
+    private java.awt.Label lb16;
+    private java.awt.Label lb17;
+    private java.awt.Label lb18;
+    private java.awt.Label lb19;
+    private java.awt.Label lb2;
+    private java.awt.Label lb20;
+    private java.awt.Label lb21;
+    private java.awt.Label lb22;
+    private java.awt.Label lb23;
+    private java.awt.Label lb24;
+    private java.awt.Label lb25;
+    private java.awt.Label lb26;
+    private java.awt.Label lb27;
+    private java.awt.Label lb28;
+    private java.awt.Label lb29;
+    private java.awt.Label lb3;
+    private java.awt.Label lb30;
+    private java.awt.Label lb31;
+    private java.awt.Label lb32;
+    private java.awt.Label lb33;
+    private java.awt.Label lb34;
+    private java.awt.Label lb35;
+    private java.awt.Label lb36;
+    private java.awt.Label lb37;
+    private java.awt.Label lb38;
+    private java.awt.Label lb39;
+    private java.awt.Label lb4;
+    private java.awt.Label lb40;
+    private java.awt.Label lb41;
+    private java.awt.Label lb42;
+    private java.awt.Label lb43;
+    private java.awt.Label lb44;
+    private java.awt.Label lb45;
+    private java.awt.Label lb46;
+    private java.awt.Label lb47;
+    private java.awt.Label lb48;
+    private java.awt.Label lb49;
+    private java.awt.Label lb5;
+    private java.awt.Label lb50;
+    private java.awt.Label lb6;
+    private java.awt.Label lb7;
+    private java.awt.Label lb8;
+    private java.awt.Label lb9;
     private javax.swing.JLabel lbEscogerBus;
     private javax.swing.JTextField txtCedula;
     private javax.swing.JTextField txtNombre;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Guis;
+package Modelos;
 
 import Modelos.Pasajero;
 
@@ -13,12 +13,12 @@ import Modelos.Pasajero;
  */
 public class Silla {
 
-    int numero;
-    boolean disponibilidad;
-    Pasajero pasajero;
-    String posicion;
-    String clase;
-    int Precio;
+    private int numero;
+    private boolean disponibilidad;
+    private Pasajero pasajero;
+    private String posicion;
+    private String clase;
+    private int Precio;
 
     public Silla(int numero, boolean disponibilidad, String posicion, String clase, Pasajero pasajero, int Precio) {
         this.numero = numero;

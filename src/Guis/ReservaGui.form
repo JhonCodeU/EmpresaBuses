@@ -102,10 +102,12 @@
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel4" min="-2" pref="43" max="-2" attributes="0"/>
-                                          <Component id="lbEscogerBus" alignment="1" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel11" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Component id="lbEscogerBus" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -119,7 +121,7 @@
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jLabelPrecio" max="32767" attributes="0"/>
+                                      <Component id="jLabelPrecio" pref="94" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                                       <Component id="btnRegistrar" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
@@ -127,13 +129,16 @@
                                   <Component id="txtNombre" max="32767" attributes="0"/>
                                   <Component id="jBoxClase" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtCedula" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jBoxPosicion" alignment="0" max="32767" attributes="0"/>
                                   <Component id="cbBus" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jBoxSilla" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jBoxPosicion" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jBoxSilla" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="btnBuscar" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAtras" min="-2" max="-2" attributes="0"/>
@@ -147,7 +152,12 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbBus" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbEscogerBus" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtCedula" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -175,27 +185,13 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBoxPosicion" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBoxSilla" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace pref="36" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="cbBus" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbEscogerBus" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Component id="btnAtras" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="27" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="btnAtras" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="28" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
@@ -207,7 +203,7 @@
                               <Component id="btnRegistrar" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="30" max="32767" attributes="0"/>
+                      <EmptySpace pref="35" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -252,7 +248,6 @@
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbBusActionPerformed"/>
@@ -264,7 +259,6 @@
             <Component class="javax.swing.JLabel" name="lbEscogerBus">
               <Properties>
                 <Property name="text" type="java.lang.String" value="PLACA DEL BUS"/>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnBuscar">
@@ -398,7 +392,7 @@
             <Property name="useNullLayout" type="boolean" value="true"/>
           </Layout>
           <SubComponents>
-            <Component class="java.awt.Label" name="label3">
+            <Component class="java.awt.Label" name="lb3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -411,7 +405,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label4">
+            <Component class="java.awt.Label" name="lb4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -424,7 +418,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label7">
+            <Component class="java.awt.Label" name="lb1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -437,7 +431,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label8">
+            <Component class="java.awt.Label" name="lb2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -450,7 +444,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label9">
+            <Component class="java.awt.Label" name="lb7">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -463,7 +457,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label10">
+            <Component class="java.awt.Label" name="lb8">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -476,7 +470,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label11">
+            <Component class="java.awt.Label" name="lb5">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -489,7 +483,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label12">
+            <Component class="java.awt.Label" name="lb6">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -502,7 +496,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label13">
+            <Component class="java.awt.Label" name="lb16">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -515,7 +509,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label14">
+            <Component class="java.awt.Label" name="lb11">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -528,7 +522,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label15">
+            <Component class="java.awt.Label" name="lb12">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -541,7 +535,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label16">
+            <Component class="java.awt.Label" name="lb9">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -554,7 +548,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label17">
+            <Component class="java.awt.Label" name="lb10">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -567,7 +561,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label18">
+            <Component class="java.awt.Label" name="lb13">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -580,7 +574,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label19">
+            <Component class="java.awt.Label" name="lb15">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -593,7 +587,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label20">
+            <Component class="java.awt.Label" name="lb19">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -606,7 +600,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label21">
+            <Component class="java.awt.Label" name="lb20">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -619,7 +613,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label22">
+            <Component class="java.awt.Label" name="lb14">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -632,7 +626,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label23">
+            <Component class="java.awt.Label" name="lb17">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -645,7 +639,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label24">
+            <Component class="java.awt.Label" name="lb18">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -658,7 +652,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label25">
+            <Component class="java.awt.Label" name="lb24">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -671,7 +665,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label26">
+            <Component class="java.awt.Label" name="lb28">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -684,7 +678,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label27">
+            <Component class="java.awt.Label" name="lb23">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -697,7 +691,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label28">
+            <Component class="java.awt.Label" name="lb21">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -710,7 +704,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label29">
+            <Component class="java.awt.Label" name="lb22">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -723,7 +717,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label30">
+            <Component class="java.awt.Label" name="lb25">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -736,7 +730,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label31">
+            <Component class="java.awt.Label" name="lb27">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -749,7 +743,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label32">
+            <Component class="java.awt.Label" name="lb31">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -762,7 +756,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label33">
+            <Component class="java.awt.Label" name="lb32">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -775,7 +769,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label34">
+            <Component class="java.awt.Label" name="lb26">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -788,7 +782,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label35">
+            <Component class="java.awt.Label" name="lb29">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -801,7 +795,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label36">
+            <Component class="java.awt.Label" name="lb30">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -814,7 +808,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label37">
+            <Component class="java.awt.Label" name="lb35">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -827,7 +821,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label38">
+            <Component class="java.awt.Label" name="lb36">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -840,7 +834,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label39">
+            <Component class="java.awt.Label" name="lb39">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -853,7 +847,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label40">
+            <Component class="java.awt.Label" name="lb33">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -866,7 +860,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label41">
+            <Component class="java.awt.Label" name="lb34">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -879,7 +873,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label42">
+            <Component class="java.awt.Label" name="lb37">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -892,7 +886,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label43">
+            <Component class="java.awt.Label" name="lb44">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -905,7 +899,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label44">
+            <Component class="java.awt.Label" name="lb43">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -918,7 +912,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label45">
+            <Component class="java.awt.Label" name="lb40">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -931,7 +925,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label46">
+            <Component class="java.awt.Label" name="lb38">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -944,7 +938,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label47">
+            <Component class="java.awt.Label" name="lb41">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -957,7 +951,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label48">
+            <Component class="java.awt.Label" name="lb42">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -970,7 +964,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label49">
+            <Component class="java.awt.Label" name="lb47">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -983,7 +977,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label50">
+            <Component class="java.awt.Label" name="lb48">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -996,7 +990,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label51">
+            <Component class="java.awt.Label" name="lb50">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -1009,7 +1003,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label52">
+            <Component class="java.awt.Label" name="lb45">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -1022,7 +1016,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label53">
+            <Component class="java.awt.Label" name="lb46">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -1035,7 +1029,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="java.awt.Label" name="label54">
+            <Component class="java.awt.Label" name="lb49">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -1056,7 +1050,6 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/img/busFondo.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="dvdsd"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
