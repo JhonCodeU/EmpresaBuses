@@ -220,6 +220,21 @@ public class ReservaGui extends javax.swing.JFrame {
         lb49 = new java.awt.Label();
         jLabel2 = new javax.swing.JLabel();
         jLabelPorcentajeO = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        txttCedula = new javax.swing.JTextField();
+        btnBuscar1 = new javax.swing.JButton();
+        jLabelNom = new javax.swing.JLabel();
+        jLabelClas = new javax.swing.JLabel();
+        jLabelPos = new javax.swing.JLabel();
+        jLabelSi = new javax.swing.JLabel();
+        btnEliminar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        jLabelNombre = new javax.swing.JLabel();
+        jLabelClase = new javax.swing.JLabel();
+        jLabelPosicion = new javax.swing.JLabel();
+        jLabelSilla = new javax.swing.JLabel();
 
         label1.setBackground(new java.awt.Color(153, 153, 153));
         label1.setText("  ");
@@ -420,7 +435,7 @@ public class ReservaGui extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addGap(6, 6, 6)
                 .addComponent(btnAtras)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                 .addGroup(jpReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpReservaLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
@@ -429,7 +444,7 @@ public class ReservaGui extends javax.swing.JFrame {
                     .addGroup(jpReservaLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(btnRegistrar)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         jtpBus.addTab("Reserva pasajeros", jpReserva);
@@ -700,6 +715,121 @@ public class ReservaGui extends javax.swing.JFrame {
 
         jtpBus.addTab("Bus", jPanel4);
 
+        jLabel12.setFont(new java.awt.Font("Book Antiqua", 2, 48)); // NOI18N
+        jLabel12.setText("Buscar Pasajero");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel13.setText("Cedula");
+
+        btnBuscar1.setText("Buscar");
+        btnBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscar1ActionPerformed(evt);
+            }
+        });
+
+        jLabelNom.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelNom.setText("Nombre");
+
+        jLabelClas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelClas.setText("Clase");
+
+        jLabelPos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelPos.setText("Posicion Silla");
+
+        jLabelSi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelSi.setText("Silla");
+
+        btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(219, 219, 219)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabelClas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabelNom, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+                                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(55, 55, 55)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabelSilla)
+                                            .addComponent(txttCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(jLabelPosicion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                                                .addComponent(jLabelNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(jLabelClase, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabelSi, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(btnEliminar)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnCancelar)))
+                                .addGap(36, 36, 36)
+                                .addComponent(btnBuscar1))
+                            .addComponent(jLabelPos, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(209, 209, 209)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(177, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txttCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnBuscar1))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelNom, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jLabelNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(62, 62, 62)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelClase, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelClas, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelPos, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelSilla)
+                    .addComponent(jLabelSi, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEliminar)
+                    .addComponent(btnCancelar))
+                .addGap(144, 144, 144))
+        );
+
+        jtpBus.addTab("Buscar Pasajero", jPanel2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -818,6 +948,72 @@ public class ReservaGui extends javax.swing.JFrame {
     private void txtCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCedulaActionPerformed
+
+    private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
+        String Cedula = txttCedula.getText();
+        Pasajero pasajero = new Pasajero();
+        boolean Encontrado = false;
+        for (int i = 0; i <= 49; i++) {
+            pasajero = buSillas.getSilla()[i].getPasajero();
+            String BuscaCedula = buSillas.getSilla()[i].getPasajero().getCedula();
+            if (BuscaCedula == null ? Cedula == null : BuscaCedula.equals(Cedula)) {
+                String Nombre = buSillas.getSilla()[i].getPasajero().getNombre();
+                System.out.println(Nombre);
+                String Clase = buSillas.getSilla()[i].getClase();
+                String Posicion = buSillas.getSilla()[i].getPosicion();
+                String Numero = String.valueOf(buSillas.getSilla()[i].getNumero());
+                jLabelNombre.setText(Nombre);
+                jLabelClase.setText(Clase);
+                jLabelPosicion.setText(Posicion);
+                jLabelSilla.setText(Numero);
+                Encontrado = true;
+
+            }
+
+        }
+        if (!Encontrado) {
+            JOptionPane.showMessageDialog(null, " No realizaste ninguna reserva ");
+        }
+    }//GEN-LAST:event_btnBuscar1ActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        String Cedula = txttCedula.getText();
+        Pasajero pasajero = new Pasajero();
+        boolean Eliminar = false;
+        for(int i=0;i<=49;i++)
+        {
+            pasajero = buSillas.getSilla()[i].getPasajero();
+            String BuscaCedula = buSillas.getSilla()[i].getPasajero().getCedula();
+            if( BuscaCedula == null ? Cedula == null : BuscaCedula.equals(Cedula))
+            {
+                pasajero.setNombre(" ");
+                pasajero.setCedula(" ");
+                buSillas.getSilla()[i].setPasajero(pasajero);
+                buSillas.getSilla()[i].setDisponibilidad(true);
+                Eliminar = true;
+            }
+        }
+        txttCedula.setText("");
+        jLabelNombre.setText("");
+        jLabelClase.setText("");
+        jLabelPosicion.setText("");
+        jLabelSilla.setText("");
+        if(Eliminar)
+        {
+            JOptionPane.showMessageDialog(null, " Se ha eliminado la reserva");
+        }
+        String PorDisponible = String.valueOf((Ocupacion()*100)/50)+"%";
+        jLabelPorcentajeO.setText(PorDisponible);
+
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        txttCedula.setText("");
+        jLabelNombre.setText("");
+        jLabelClase.setText("");
+        jLabelPosicion.setText("");
+        jLabelSilla.setText("");
+    }//GEN-LAST:event_btnCancelarActionPerformed
     public void obtenerBus(){
         
         for(int i=0; i<vectorBuses.length;i++){
@@ -879,6 +1075,9 @@ public class ReservaGui extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnBuscar1;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JComboBox<String> cbBus;
     private javax.swing.JComboBox<String> jBoxClase;
@@ -886,14 +1085,25 @@ public class ReservaGui extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jBoxSilla;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelClas;
+    private javax.swing.JLabel jLabelClase;
+    private javax.swing.JLabel jLabelNom;
+    private javax.swing.JLabel jLabelNombre;
     private javax.swing.JLabel jLabelPorcentajeO;
+    private javax.swing.JLabel jLabelPos;
+    private javax.swing.JLabel jLabelPosicion;
     private javax.swing.JLabel jLabelPrecio;
+    private javax.swing.JLabel jLabelSi;
+    private javax.swing.JLabel jLabelSilla;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jpReserva;
     private javax.swing.JTabbedPane jtpBus;
@@ -954,5 +1164,6 @@ public class ReservaGui extends javax.swing.JFrame {
     private javax.swing.JLabel lbEscogerBus;
     private javax.swing.JTextField txtCedula;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txttCedula;
     // End of variables declaration//GEN-END:variables
 }
